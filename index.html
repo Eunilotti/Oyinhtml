@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about me">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact me">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="heading">HI I AM</h1>
+        <h1 class="heading">EUNICE AJAYI</h1>
+        <P>AND THIS IS MY RESUME</P>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="heading">Portfolio</h1>
+        <div class="gallery">
+            <img src="images/Background.jpg" alt="">
+            <img src="images/okiki.img.jpg" alt="">
+            <img src="images/ola.img.jpg" alt="">
+            <img src="images/david.img.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="education">
+        <h1 class="heading">Education</h1>
+        <div class="columns">
+            <div class="box">
+                <h2>Bachelor of Science in Computer Science</h2>
+                <p> My relevant Courseworks were in Data Structures and Algorithms
+                    , Object-Oriented Programming, Database Management Systems, and
+                    Computern Networks. For myy Academic Projects i Developed a web- 
+                    based application for online shopping  using HTML, CSS, JavaScript
+                    , and PHP, incorporating secure authentication and database functionalities.</p>
+            </div>
+            <div class="box">
+                <h2>Masters of Science in Computer Science</h2>
+                <p> Here my Courseworks were advanced; studying Artificial intelligence
+                    , Machine Learning, Distributed Systems, and Advanced Algorithms.
+                    My Research thesis, i conducted a research on optimizing convolutional
+                    neural networks (CNNs) for image classification tasks, i also proposed
+                    novel architecture modifications and conducted extensive experiments
+                    to evaluate their performance on benchmark datasets.</p>
+            </div>
+          
+        </div>
+    </section>
+    <section id="about me">
+        <h1 class="heading">About Me</h1>
+        <div class="about">
+            <img src="images/d2c9c17be26cf3f8fcce97bccee135b9.jpg" alt="My Pic">
+                 <div class="name">  
+                <h2>I'm Eunice Ajayi</h2>
+                 <p>I am a passionate and dedicated computer scientists with a deep 
+                   expertise in artificial intelligence and machine learning. With 
+                   a Ph.D. in Computer Science, my research focused on developing
+                   advanced deep learning architectures for natural language processing
+                   tasks. I am commited to pushing the boundaries of technology through
+                   innovative research and translating theoretical concepts into practical
+                   applications that solve real-world problems.</p>
+                   <p>Throughout my academic journey, I have published numerous papers in 
+                      top-tier conferences and journals, earning recognition for my contributions
+                      to the field. Ithrive in collaborative environments and have a proven track
+                      record of leading interdisciplinary research teams to success..</p>
+                </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="top-header">
+            <h2 class="heading">Projects</h2>
+        </div>
+        <div class="project-container">
+            <div class="box">
+                <div class="Image_1">
+                <img src="images/hFQ4qcvDcRYuZSWYofFE8SsflQw2-age calculator.jpeg" alt="project_img_1" width="250px" height="250px">
+                <a href="shubomi.html">
+                    view
+                </a>                    
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="Image_2">
+                <img src="images/hFQ4qcvDcRYuZSWYofFE8SsflQw2-medium_sticky_navbar_cba6c5b473.jpeg" alt="project_img_2" width="250px" height="250px">
+                <a href="shubomi_1.html">
+                    view
+                </a>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact me">
+        <h1 class="heading">Contact</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name">
+            <input type="email" name="email" class="input" placeholder="Enter Your Email">
+            <textarea name="message" id="message" cols="70" rows="20"
+            placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </section>
+    
+    <script>
+        // JavaScript for form validation
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var error = document.getElementById("error");
+
+    // Simple validation
+    if (name === '' || email === '' || message === '') {
+        error.innerHTML = "Please fill out all fields";
+        event.preventDefault();
+        return false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        error.innerHTML = "Please enter a valid email address";
+        event.preventDefault();
+        return false;
+    } else {
+        error.innerHTML = "";
+        return true;
+    }
+});
+    </script>
+
+    <footer>
+        <div class="date-time">
+            <span id="date"></span> 
+            <span id="time"></span>
+        </div>
+        <div class="copyright">
+            &copy; <span id="year">2024</span> 
+            Eunice's Portfolio. All rights reserved.
+        </div>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Footer Section</title>
+    </footer>
+        <!-- Javascript -->  
+<script>
+// JavaScript for displaying date, time, and copyright symbol
+function updateTime() {
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    // Add leading zero if needed
+    day = (day < 10) ? '0' + day : day;
+    month = (month < 10) ? '0' + month : month;
+    hours = (hours < 10) ? '0' + hours : hours;
+    minutes = (minutes < 10) ? '0' + minutes : minutes;
+    seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+    document.getElementById("date").innerHTML = year + '-' + month + '-' + day;
+    document.getElementById("time").innerHTML = hours + ':' + minutes + ':' + seconds;
+
+    document.getElementById("year").innerHTML = year;
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display date and time
+updateTime();
+</script>
+
+</body>
+</html>
+  
+    
+</body>
+</html>
